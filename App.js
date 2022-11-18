@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>안전한거 맞겠지....?</Text>
+      <Text style={styles.text}>리액트 네이티브 연습!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,4 +17,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text : {
+    fontSize: 48,
+    color: "red",
+  }
 });

@@ -1,0 +1,10 @@
+React - Native 규칙
+
+1. View = container
+(div 대신 View를 사용! 항상 import를 해야 함)
+
+2. react-native에 있는 모든 text => text component에 들어가야 함!
+
+3. StylesSheet.create({})
+=> object를 받음
+=> 자동 완성이 가능 함
