@@ -8,3 +8,17 @@ React - Native 규칙
 3. StylesSheet.create({})
 => object를 받음
 => 자동 완성이 가능 함
+
+
+- component / API => import
+
+- 모든 View는 기본적으로 Flex Container
+
+- Felx Direction의 기본값 : Column
+( 웹의 Flex Direction의 기본값 : Row ) 
+
+- 스크린 크기가 다양하므로 반응형 디자인을 생각해야 함
+( 레이아웃에서는 width, height 등은 사용 X )
+=> flex에 사이즈를 주면 View의 크기를 줄 수 있음 (비율)
+=> 부모 View에 flex 사이즈를 지정해줘야만 가능!
+( 부모 View가 여러개면 flex 사이즈 값을 다르게 하면 되지만, 부모 View가 하나이면 어떤 숫자를 넣어도 그대로 )
