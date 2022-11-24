@@ -1,4 +1,4 @@
-React - Native 규칙
+<React - Native 규칙>
 
 1. View = container
 (div 대신 View를 사용! 항상 import를 해야 함)
@@ -9,6 +9,7 @@ React - Native 규칙
 => object를 받음
 => 자동 완성이 가능 함
 
+<Layout>
 
 - component / API => import
 
@@ -22,3 +23,21 @@ React - Native 규칙
 => flex에 사이즈를 주면 View의 크기를 줄 수 있음 (비율)
 => 부모 View에 flex 사이즈를 지정해줘야만 가능!
 ( 부모 View가 여러개면 flex 사이즈 값을 다르게 하면 되지만, 부모 View가 하나이면 어떤 숫자를 넣어도 그대로 )
+
+<Style>
+
+- ScrollView : 스크롤 다운을 할 수 있게 만드는 Component
+- horizontal : ScrollView의 prop, 스크롤을 수평으로 만들어 줌
+- contentContainerStyle : ScrollView의 prop, ScrollView 사용 시, ScrollView의 Style을 만들고 싶을 때 사용
+(style => contentContainerStyle)
+- pagingEnabled : ScrollView의 prop, 페이지를 생성하는 prop, 스크롤을 제한하는 대신 새로운 페이지가 생성하게 만드는 prop
+- showsHorizontalScrollIndicator : ScrollView의 prop, 페이지 표시를 true(보임), false(숨김)로 설정하는 prop
+(indicatorStyle => indicator의 색상을 변경할 수 있음 / iOS에서만 사용 가능)
+(persistentScrollbar => Scrollbar가 투명해지지 않도록 설정 / Android에서만 사용 가능)
+
+- Dimensions : 화면 크기를 알 수 있는 API
+const SCREEN_WIDTH = Dimensions.get("window").width;
+===
+const { width:SCREEN_WIDTH } = Dimensions.get("window"); 
+=> ES6 (object 안에 있는 width를 가져오고 그 이름을 지정 이름으로 바꾼다는 의미)
+
