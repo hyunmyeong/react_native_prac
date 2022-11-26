@@ -41,3 +41,19 @@ const SCREEN_WIDTH = Dimensions.get("window").width;
 const { width:SCREEN_WIDTH } = Dimensions.get("window"); 
 => ES6 (object 안에 있는 width를 가져오고 그 이름을 지정 이름으로 바꾼다는 의미)
 
+
+
+<스타일 합치는 법> -> ES6 + JavaScript
+
+<View style={style.city}>
+    <Text style={style.cityName}>{city}</Text>
+</View>
+
+===>
+
+<View style={{...style.city, alignItems : "center"}}>
+    <Text style={style.cityName}>{city}</Text>
+</View>
+
+스타일시트에 스타일을 하나만 적용하고 싶고, 다른 스타일을 추가하고 싶다면
+{... , }

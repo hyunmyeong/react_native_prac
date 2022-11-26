@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { ScrollView, Dimensions, StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import * as Location from 'expo-location';
+import { Fontisto } from '@expo/vector-icons';
 
 const { width:SCREEN_WIDTH } = Dimensions.get("window");
 //const SCREEN_WIDTH = Dimensions.get("window").width;
 
 const API_KEY = "e04f0548af06e129812f553d855f169c";
+
+const icons = {
+  Clouds : "cloudy",
+  Clear : "day-sunny",
+  Atmosphere : "cloudy-gusts",
+  Snow : "snow",
+  Rain : "rains",
+  Drizzle : "rain",
+  Thunderstorm : "lightning"
+}
 
 export default function App() {
 
@@ -47,9 +58,13 @@ export default function App() {
           ) : (
           days.map((day,index) => (
             <View key={index} style={style.day}>
-              <Text style={style.temp}>
-                {parseFloat(day.temp.day).toFixed(1)} 
-              </Text>
+              <View style={{flexDirection:"row", alignItems:"flex-end", justifyContent:"space-between",width:"100%"}}>
+                <Text style={style.temp}>
+                  {parseFloat(day.temp.day).toFixed(1)} 
+                </Text>
+                <Fontisto name={icons[day.weather[0].main]} size={35} color="black" />
+              </View>
+
               <Text style={style.description}>{day.weather[0].main}</Text>
             </View>
             ))
